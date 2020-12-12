@@ -4,8 +4,6 @@
   "description": "Your tabs always upfront of you!",
   "permissions": [
     "tabs",
-    "activeTab",
-    "declarativeContent",
     "storage"
   ],
   "background": {
@@ -15,20 +13,20 @@
     "persistent": false
   },
   "options_page": "options.html",
-  "page_action": {
-    "default_popup": "popup.html",
+  "browser_action": {
+    "default_title": "Restore Pinned Tabs",
     "default_icon": {
-      "16": "images/get_started16.png",
-      "32": "images/get_started32.png",
-      "48": "images/get_started48.png",
-      "128": "images/get_started128.png"
+      "16": "images/tab-icon.png",
+      "32": "images/tab-icon.png",
+      "48": "images/tab-icon.png",
+      "128": "images/tab-icon.png"
     }
   },
   "icons": {
-    "16": "images/get_started16.png",
-    "32": "images/get_started32.png",
-    "48": "images/get_started48.png",
-    "128": "images/get_started128.png"
+    "16": "images/tab-icon.png",
+    "32": "images/tab-icon.png",
+    "48": "images/tab-icon.png",
+    "128": "images/tab-icon.png"
   },
   "manifest_version": 2
 }

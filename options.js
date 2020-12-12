@@ -1,17 +1,36 @@
-let page = document.getElementById('buttonDiv');
-const kButtonColors = ['#3aa757', '#e8453c', '#f9bb2d', '#4688f1'];
+// tabs = [
+//     'https://music.yandex.ru/home',
+//     'https://gitlab.alycedev.com',
+//     'https://alycecom.atlassian.net/wiki',
+//     'https://alycecom.atlassian.net/jira',
+//     'https://mail.google.com/mail',
+//     'https://calendar.google.com/calendar/u/0/r/week',
+//     'https://mailtrap.io',
+// ]
 
-function constructOptions(kButtonColors) {
-    for (let item of kButtonColors) {
-        let button = document.createElement('button');
-        button.style.backgroundColor = item;
-        button.addEventListener('click', function () {
-            chrome.storage.sync.set({color: item}, function () {
-                console.log('color is ' + item);
-            })
-        });
-        page.appendChild(button);
-    }
+document.onload = function () {
+    const textarea = document.getElementById('pinnedTabs')
+
+    chrome.storage.sync.get(['tabs'], function (result) {
+        console.log('options loaded', result);
+
+        if (result.tabs.length > 0) {
+            textarea.value = result.tabs.join("\n")
+        }
+    })
 }
 
-constructOptions(kButtonColors);
+const save = document.getElementById('saveSettings')
+
+save.addEventListener('click', function () {
+    let text = document.getElementById('pinnedTabs').value;
+
+    let tabs = []
+    if (text.length > 0) {
+        tabs = text.split('\n')
+    }
+
+    chrome.storage.sync.set({tabs: tabs}, function () {
+        console.log('tabs saved', tabs);
+    })
+});

@@ -1,14 +1,26 @@
-chrome.runtime.onInstalled.addListener(function() {
-    chrome.storage.sync.set({color: '#3aa757'}, function() {
-        console.log('The color is green.');
+chrome.runtime.onInstalled.addListener(function () {
+    chrome.storage.sync.set({
+        tabs: []
+    }, function () {
+        console.log('Tabs initialized');
     });
-    chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
-        chrome.declarativeContent.onPageChanged.addRules([{
-            conditions: [new chrome.declarativeContent.PageStateMatcher({
-                pageUrl: {hostEquals: 'developer.chrome.com'},
-            })
-            ],
-            actions: [new chrome.declarativeContent.ShowPageAction()]
-        }]);
+});
+
+chrome.browserAction.onClicked.addListener(function () {
+    chrome.storage.sync.get(['tabs'], function (result) {
+        console.log('Value currently is ', result.tabs);
+        result.tabs.forEach(function (tab) {
+            chrome.tabs.query({
+                url: tab + "/*",
+                pinned: true
+            }, function (collection) {
+                if (collection.length === 0) {
+                    chrome.tabs.create({
+                        url: tab,
+                        pinned: true
+                    })
+                }
+            });
+        });
     });
 });
