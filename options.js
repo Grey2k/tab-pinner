@@ -8,7 +8,7 @@
 //     'https://mailtrap.io',
 // ]
 
-document.onload = function () {
+window.onload = function () {
     const textarea = document.getElementById('pinnedTabs')
 
     chrome.storage.sync.get(['tabs'], function (result) {

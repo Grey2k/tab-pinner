@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="887f6bfb-f59f-4969-af73-465fbab348e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/tab-icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/background.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/get_started128.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/get_started16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/get_started32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/get_started48.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/options.html" beforeDir="false" afterPath="$PROJECT_DIR$/options.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/options.js" beforeDir="false" afterPath="$PROJECT_DIR$/options.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/popup.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/popup.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +50,7 @@
       <option name="presentableId" value="Default" />
       <updated>1607723727931</updated>
       <workItem from="1607723729007" duration="4356000" />
-      <workItem from="1607812214186" duration="4158000" />
+      <workItem from="1607812214186" duration="4639000" />
     </task>
     <servers />
   </component>
